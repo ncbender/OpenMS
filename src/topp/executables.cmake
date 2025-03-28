@@ -138,7 +138,6 @@ TICCalculator
 TextExporter
 TriqlerConverter
 XFDR
-XTandemAdapter
 XMLValidator
 )
 

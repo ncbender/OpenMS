@@ -37,15 +37,9 @@
 
 # allow additional custom compile flags on the cmake command line by using -DMY_CXX_FLAGS="-g -D_GLIBCXX_ASSERTIONS ..."
 # useful for e.g. Release with debug symbols on gcc/clang
-if (MY_CXX_FLAGS)
+if (MY_CXX_FLAGS) ## do not change this name! it's used in configh.cmake
   message(STATUS "Adding custom compile flags: '${MY_CXX_FLAGS}'!")
-  add_compile_options(${MY_CXX_FLAGS})
-endif()
-
-if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  # workaround for MacOS 10.13 and below which does not support std::visit
-  # see https://github.com/OpenMS/OpenMS/issues/5714
-  add_definitions(-D_LIBCPP_DISABLE_AVAILABILITY)  
+  add_compile_options(${MY_CXX_FLAGS}) 
 endif()
 
 ########
