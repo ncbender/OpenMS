@@ -3989,6 +3989,7 @@ namespace OpenMS::Internal
       logger_.endProgress(os.tellp());
     }
 
+    
     void MzMLHandler::writeHeader_(std::ostream& os,
                                    const MapType& exp,
                                    std::vector<std::vector< ConstDataProcessingPtr > >& dps,
